@@ -14,9 +14,9 @@ st.set_page_config(page_title = "Himalaya's Sales Dashboard",
 #read excel file
 df = pd.read_excel("data/supermarkt_sales.xlsx",
                   sheet_name="Sales",
-        skiprows=3,
-        usecols="B:R",
-        nrows=1000,)
+                  skiprows=3,
+                  usecols="B:R",
+                  nrows=1000)
 
 # Add 'hour' column to dataframe
 df["hour"] = pd.to_datetime(df["Time"], format="%H:%M:%S").dt.hour
